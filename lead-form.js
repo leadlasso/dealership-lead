@@ -16,49 +16,51 @@
   // ===== Inject Modal HTML =====
   const modalHTML = `
     <style>
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0; top: 0;
-        width: 100%; height: 100%;
-        background-color: rgba(0,0,0,0.5);
-        justify-content: center;
-        align-items: center;
+      /* Stronger selectors to beat dealer CSS */
+      body .dealership-lead-modal {
+        display: none !important;
+        position: fixed !important;
+        z-index: 10000 !important;
+        left: 0 !important; top: 0 !important;
+        width: 100% !important; height: 100% !important;
+        background-color: rgba(0,0,0,0.5) !important;
+        justify-content: center !important;
+        align-items: center !important;
       }
-      .modal.show { display: flex; }
-      .modal-content {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        max-width: 400px;
-        width: 90%;
-        position: relative;
-        text-align: center;
+      body .dealership-lead-modal.show { display: flex !important; }
+
+      body .dealership-lead-modal .modal-content {
+        background: #fff !important;
+        padding: 20px !important;
+        border-radius: 8px !important;
+        max-width: 400px !important;
+        width: 90% !important;
+        position: relative !important;
+        text-align: center !important;
       }
-      .close {
-        position: absolute;
-        right: 15px;
-        top: 10px;
-        font-size: 20px;
-        cursor: pointer;
+      body .dealership-lead-modal .close {
+        position: absolute !important;
+        right: 15px !important;
+        top: 10px !important;
+        font-size: 20px !important;
+        cursor: pointer !important;
       }
-      .contact-form input {
-        width: 100%;
-        padding: 10px;
-        margin: 8px 0;
-        border: 1px solid #ccc;
-        border-radius: 6px;
+      body .dealership-lead-modal .contact-form input {
+        width: 100% !important;
+        padding: 10px !important;
+        margin: 8px 0 !important;
+        border: 1px solid #ccc !important;
+        border-radius: 6px !important;
       }
-      .contact-form button {
-        background: rgb(23, 19, 69);
-        color: white;
-        padding: 15px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        width: 100%;
-        font-weight: bold;
+      body .dealership-lead-modal .contact-form button {
+        background: rgb(23, 19, 69) !important;
+        color: white !important;
+        padding: 15px !important;
+        border: none !important;
+        border-radius: 6px !important;
+        cursor: pointer !important;
+        width: 100% !important;
+        font-weight: bold !important;
       }
     </style>
 
